@@ -1,6 +1,7 @@
 
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const connectDB = require('./server/config/db');
 require ('dotenv').config();
 
 
@@ -8,6 +9,7 @@ require ('dotenv').config();
 
 const app = express();
 const port =  process.env.PORT
+connectDB();
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
@@ -25,7 +27,7 @@ app.use((req,res,next)=>{
     locals={
         title:"404"
     }
-    res.render('404',locals)
+    res.render('userPages/404',locals)
     //res.render('pages/app-404',{locals})
 })
 

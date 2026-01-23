@@ -1,0 +1,192 @@
+<%- include('admin_template/header') %>
+    <%- include('admin_template/aside') %>
+        <!-- begin app-main -->
+        <div class="app-main" id="main">
+            <!-- begin container-fluid -->
+            <div class="container-fluid">
+                <!-- begin row -->
+                <div class="row">
+                    <div class="col-md-12 m-b-30">
+                        <!-- begin page title -->
+                        <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                            <div class="page-title mb-2 mb-sm-0">
+                                <h1>Products</h1>
+                            </div>
+                            <div class="ml-auto d-flex align-items-center">
+                                <nav>
+                                    <ol class="breadcrumb p-0 m-b-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="/Dashboard"><i class="ti ti-home"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            Pages
+                                        </li>
+                                        <li class="breadcrumb-item active text-primary" aria-current="page">Products
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                    </div>
+                </div>
+                <!-- end row -->
+                <!-- start-clients contant-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-statistics clients-contant">
+                            <div id="msg"></div>
+                            <br>
+                            <div class="card-body py-0 table-responsive">
+                                <form id="productUpload" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Cateogry</label>
+                                                <input type="text" id="productCategory" class="form-control"
+                                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                    placeholder="Enter category" required>
+                                                <small id="emailHelp" class="form-text text-muted">Please make sure the
+                                                    product category is always inputed</small>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Product Name</label>
+                                                <input type="text" id="productName" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Enter product Name"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Price</label>
+                                                <input type="number" id="productPrice" class="form-control"
+                                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                    placeholder="Enter  Price" required>
+                                                <small id="emailHelp" class="form-text text-muted">We only accept
+                                                    Naira.</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Size</label>
+                                                <div class="col-md-12">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="sizeInput"
+                                                            style="margin-left: -3.5%;" placeholder="Enter Size"
+                                                            aria-label="aize" aria-describedby="basic-addon2">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text" id="basic-addon2">Add
+                                                                Size</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <small id="emailHelp" class="form-text text-muted"
+                                                        style="margin-left:-3.5%">Product sizes can either be in numeric
+                                                        or alphabets </small>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul id="previewSizes"></ul>
+                                                    <div id="sizesContainer"></div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Quantity</label>
+                                                <input type="number" id="productQuantity" class="form-control"
+                                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                    placeholder="Enter  Quantity" required>
+                                                <small id="emailHelp" class="form-text text-muted">Alphabets are not
+                                                    allowed when inputing product Quantity.</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Color</label>
+                                                <div class="col-md-12">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="colorInput"
+                                                            style="margin-left: -3.5%;" placeholder="Enter Color"
+                                                            aria-label="aize" aria-describedby="basic-addon2">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text addColor"
+                                                                id="basic-addon2 ">Add Color</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <small id="emailHelp" class="form-text text-muted"
+                                                        style="margin-left:-3.5%">Product Colours should only be written
+                                                        in alphabets </small>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul id="previewColor"></ul>
+                                                    <div id="colorContainer"></div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Upload image of product</label>
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="image"
+                                                            aria-describedby="inputGroupFileAddon04">
+                                                        <label class="custom-file-label" for="inputGroupFile04">Choose
+                                                            file</label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"
+                                                            id="inputGroupFileAddon04">Button</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Description</label>
+                                                <textarea class="form-control" id="productDescription"></textarea>
+                                                <small id="emailHelp" class="form-text text-muted">Product description
+                                                    should be not more than 500 words</small>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                    <button type="submit" class="btn btn-primary" style="margin-bottom:4%">Save
+                                        Product</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end-clients contant-->
+            </div>
+            <!-- end container-fluid -->
+        </div>
+        <!-- end app-main -->
+        </div>
+        <!-- end app-container -->
+        <!-- begin footer -->
+
+        <%- include('admin_template/footer') %>
+            <script>
+                
+
+            </script>
