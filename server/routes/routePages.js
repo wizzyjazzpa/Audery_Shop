@@ -14,6 +14,8 @@ router.get('/createAdmin',controlPages.createAdmin);
 router.get('/admin',controlPages.Admin);
 router.get('/lockscreen',controlPages.lockScreen);
 router.get('/Dashboard',admin_jwt_token,controlPages.adminDashboard);
-router.get('/productUplaod',admin_jwt_token,controlPages.uploadProducts);
+router.get('/productUpload',admin_jwt_token,controlPages.uploadProducts);
+router.get('/viewproducts',admin_jwt_token,controlPages.viewProducts);
+router.get('/editproducts',admin_jwt_token,controlPages.edit_single_product);
 router.get('/logout',controlPages.logout)
 module.exports = router;

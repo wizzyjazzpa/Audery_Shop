@@ -1,0 +1,126 @@
+<%- include('admin_template/header') %>
+<%- include('admin_template/aside') %>
+                <!-- begin app-main -->
+                <div class="app-main" id="main">
+                    <!-- begin container-fluid -->
+                    <div class="container-fluid">
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                    <div class="page-title mb-2 mb-sm-0">
+                                        <h1>View Products</h1>
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="/Dashboard"><i class="ti ti-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="/productUpload">Products</a>
+                                                </li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">View Products</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start-clients contant-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-statistics clients-contant">
+                                    
+                                    <div class="card-body py-0 table-responsive">
+
+                                          <div class="datatable-wrapper table-responsive">
+                                            <table id="datatable" class="table table-borderless table-striped">
+                                                      <thead>
+                                                    <tr style="text-align: center;"> 
+                                                        <th>Category</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Size</th>
+                                                        <th>Quanity</th>
+                                                        <th>Colors</th>
+                                                        <th>Image</th>
+                                                        <th>Date uploaded</th>
+                                                        <th>Action</th>
+                                                      
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% products.forEach( function(product) { %>
+                                                         <tr>
+                                                        <td><%= product.category %></td>
+                                                        <td><%= product.Name %></td>
+                                                        <td><%= "₦"+Number(product.price).toLocaleString("en-us") %></td>
+                                                        <td>
+                                                            <% if (product.sizes && product.sizes.length) { %>
+                                                                    <%= product.sizes.join(",") %>
+                                                            <% }else{%>
+                                                                 <span>Sizes not available</span>
+                                                           <% } %>
+                                                        </td>
+                                                        <td><%= Number(product.quantity) %></td>
+                                                        <td>
+                                                            <% if (product.color && product.color.length) { %>
+                                                                <%= product.color.join(" , ") %>
+                                                         
+                                                        <% }else{ %>
+                                                                <span>Color not available</span>
+                                                       <% } %>
+                                                    </td>
+                                                     <td style="width:1%;">
+                                                        <center><img src="uploads/<%= product.image %>" class="image-fluid resizeImage" alt="<%= product.name %>" ></center>
+                                                     </td>
+                                                     <td><%= product.createdAt %></td>
+                                                    
+                                                       
+                                                        <td>
+                                                             <a class="mr-3" id="edit" href="/editproducts?id=<%= product._id %>"><i class="fe fe-edit"></i></a>
+                                                             <a  class="delete" data-getid="<%= product._id %>" ><i class="fe fe-trash-2"></i></a>
+                                                            </td>
+                                                    <% }) %>
+                                                     
+                                                    </tr>
+                                                    
+                                                   
+                                                    
+                                                   
+                                                   
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                       <th>Category</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Size</th>
+                                                        <th>Quanity</th>
+                                                        <th>Colors</th>
+                                                        <th>Image</th>
+                                                        <th>Description</th>
+                                                        <th>Date uploaded</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                            
+                                        </div>
+
+                                      </div><!---end of Cardbody-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end-clients contant-->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+                <!-- end app-main -->
+            </div>
+            <!-- end app-container -->
+            <!-- begin footer -->
+            <%- include('admin_template/footer') %>

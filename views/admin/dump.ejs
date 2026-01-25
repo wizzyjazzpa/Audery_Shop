@@ -1,52 +1,86 @@
-<%- include('admin_template/header') %>
-    <%- include('admin_template/aside') %>
-        <!-- begin app-main -->
-        <div class="app-main" id="main">
-            <!-- begin container-fluid -->
-            <div class="container-fluid">
-                <!-- begin row -->
-                <div class="row">
-                    <div class="col-md-12 m-b-30">
-                        <!-- begin page title -->
-                        <div class="d-block d-sm-flex flex-nowrap align-items-center">
-                            <div class="page-title mb-2 mb-sm-0">
-                                <h1>Products</h1>
-                            </div>
-                            <div class="ml-auto d-flex align-items-center">
-                                <nav>
-                                    <ol class="breadcrumb p-0 m-b-0">
-                                        <li class="breadcrumb-item">
-                                            <a href="/Dashboard"><i class="ti ti-home"></i></a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            Pages
-                                        </li>
-                                        <li class="breadcrumb-item active text-primary" aria-current="page"><a href="/viewproducts">View Products</a></li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                        <!-- end page title -->
-                    </div>
-                </div>
-                <!-- end row -->
-                <!-- start-clients contant-->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-statistics clients-contant">
-                            <div id="msg"></div>
-                            <br>
-                            <div class="card-body py-0 table-responsive">
-                                <form id="productUpload" enctype="multipart/form-data">
-                                    <div class="row">
+<table id="datatable" class="display compact table table-striped table-bordered">
+                                                <thead>
+                                                    <tr> 
+                                                        <th>Category</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Size</th>
+                                                        <th>Quanity</th>
+                                                        <th>Colors</th>
+                                                        <th>Image</th>
+                                                        <th>Date uploaded</th>
+                                                        <th>Action</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% products.forEach( function(product) { %>
+                                                         <tr>
+                                                        <td><%= product.category %></td>
+                                                        <td><%= product.Name %></td>
+                                                        <td><%= "₦"+Number(product.price).toLocaleString("en-us") %></td>
+                                                        <td>
+                                                            <% if (product.sizes && product.sizes.length) { %>
+                                                                    <%= product.sizes.join(",") %>
+                                                            <% }else{%>
+                                                                 <span>Sizes not available</span>
+                                                           <% } %>
+                                                        </td>
+                                                        <td><%= Number(product.quantity) %></td>
+                                                        <td>
+                                                            <% if (product.color && product.color.length) { %>
+                                                                <%= product.color.join(" , ") %>
+                                                         
+                                                        <% }else{ %>
+                                                                <span>Color not available</span>
+                                                       <% } %>
+                                                    </td>
+                                                     <td style="width: 20%;">
+                                                        <center><img src="uploads/<%= product.image %>" class="image-fluid resizeImage" alt="<%= product.name %>" ></center>
+                                                     </td>
+                                                     <td><%= product.createdAt %></td>
+                                                     <td>
+                                                        <button type="button" class="btn btn-primary">edit</button>
+                                                     </td>
+                                                     <td>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
+                                                     </td>
+                                                    </tr>
+                                                     <td><span class="badge badge-success-inverse">Active</span></td>
+                                                        <td> <a class="mr-3" href="javascript:void(0);"><i class="fe fe-edit"></i></a><a href="javascript:void(0);"><i class="fe fe-trash-2"></i></a></td>
+                                                    <% }) %>
+                                                   
+                                                    
+                                                   
+                                                   
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                       <th>Category</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Size</th>
+                                                        <th>Quanity</th>
+                                                        <th>Colors</th>
+                                                        <th>Image</th>
+                                                        <th>Description</th>
+                                                        <th>Date uploaded</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+
+
+
+
+
+                                            <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Product Cateogry</label>
                                                 <input type="text" id="productCategory" class="form-control"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                    placeholder="Enter category" required>
-                                                <small id="emailHelp" class="form-text text-muted">Please make sure the
-                                                    product category is always inputed</small>
+                                                    placeholder="Enter category" readonly>
+                                                
                                             </div>
 
                                         </div>
@@ -55,7 +89,7 @@
                                                 <label for="exampleInputPassword1">Product Name</label>
                                                 <input type="text" id="productName" class="form-control"
                                                     id="exampleInputPassword1" placeholder="Enter product Name"
-                                                    required>
+                                                    readonly>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -169,20 +203,6 @@
 
                                     <button type="submit" class="btn btn-primary" style="margin-bottom:4%">Save
                                         Product</button>
-                                </form>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end-clients contant-->
-            </div>
-            <!-- end container-fluid -->
-        </div>
-        <!-- end app-main -->
-        </div>
-        <!-- end app-container -->
-        <!-- begin footer -->
 
-        <%- include('admin_template/footer') %>
-           
+                                        

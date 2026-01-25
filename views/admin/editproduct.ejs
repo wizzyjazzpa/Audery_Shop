@@ -10,7 +10,7 @@
                         <!-- begin page title -->
                         <div class="d-block d-sm-flex flex-nowrap align-items-center">
                             <div class="page-title mb-2 mb-sm-0">
-                                <h1>Products</h1>
+                                <h1>Edit Profile</h1>
                             </div>
                             <div class="ml-auto d-flex align-items-center">
                                 <nav>
@@ -19,9 +19,11 @@
                                             <a href="/Dashboard"><i class="ti ti-home"></i></a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            Pages
+                                            <a href="/viewproducts">View Products</a>
                                         </li>
-                                        <li class="breadcrumb-item active text-primary" aria-current="page"><a href="/viewproducts">View Products</a></li>
+                                        <li class="breadcrumb-item active text-primary" aria-current="page">
+                                            <%= locals.title %>
+                                        </li>
                                     </ol>
                                 </nav>
                             </div>
@@ -34,28 +36,24 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-statistics clients-contant">
-                            <div id="msg"></div>
-                            <br>
+                           <div id="msg"></div>
                             <div class="card-body py-0 table-responsive">
-                                <form id="productUpload" enctype="multipart/form-data">
-                                    <div class="row">
+                                <form id="editProduct" enctype="multipart/form-data">
+                                       
+                                            <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Product Cateogry</label>
-                                                <input type="text" id="productCategory" class="form-control"
-                                                    id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                    placeholder="Enter category" required>
-                                                <small id="emailHelp" class="form-text text-muted">Please make sure the
-                                                    product category is always inputed</small>
+                                                <input type="hidden" name="" id="productID" value="<%= product._id %>">
+                                                <input type="text" id="productCategory" class="form-control"   aria-describedby="emailHelp" value="<%= product.category %>" readonly>
+                                                
                                             </div>
 
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Product Name</label>
-                                                <input type="text" id="productName" class="form-control"
-                                                    id="exampleInputPassword1" placeholder="Enter product Name"
-                                                    required>
+                                                <input type="text" id="productName" class="form-control"  value="<%= product.Name %>"readonly>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -63,7 +61,7 @@
                                                 <label for="exampleInputEmail1">Product Price</label>
                                                 <input type="number" id="productPrice" class="form-control"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                    placeholder="Enter  Price" required>
+                                                    value="<%= product.price %>" required>
                                                 <small id="emailHelp" class="form-text text-muted">We only accept
                                                     Naira.</small>
                                             </div>
@@ -75,22 +73,14 @@
                                                 <div class="col-md-12">
                                                     <div class="input-group mb-3">
                                                         <input type="text" class="form-control" id="sizeInput"
-                                                            style="margin-left: -3.5%;" placeholder="Enter Size"
+                                                            style="margin-left: -3.5%;" value="<%= product.sizes.join(",") %>"
                                                             aria-label="aize" aria-describedby="basic-addon2">
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text" id="basic-addon2">Add
-                                                                Size</span>
-                                                        </div>
+                                                        
 
                                                     </div>
-                                                    <small id="emailHelp" class="form-text text-muted"
-                                                        style="margin-left:-3.5%">Product sizes can either be in numeric
-                                                        or alphabets </small>
+                                                   
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <ul id="previewSizes"></ul>
-                                                    <div id="sizesContainer"></div>
-                                                </div>
+                                                
 
 
                                             </div>
@@ -101,9 +91,8 @@
                                                 <label for="exampleInputEmail1">Product Quantity</label>
                                                 <input type="number" id="productQuantity" class="form-control"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                    placeholder="Enter  Quantity" required>
-                                                <small id="emailHelp" class="form-text text-muted">Alphabets are not
-                                                    allowed when inputing product Quantity.</small>
+                                                    value="<%= product.quantity %>" required>
+                                                
                                             </div>
                                         </div>
 
@@ -113,27 +102,18 @@
                                                 <div class="col-md-12">
                                                     <div class="input-group mb-3">
                                                         <input type="text" class="form-control" id="colorInput"
-                                                            style="margin-left: -3.5%;" placeholder="Enter Color"
+                                                            style="margin-left: -3.5%;" value="<%= product.color.join(",") %>"
                                                             aria-label="aize" aria-describedby="basic-addon2">
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text addColor"
-                                                                id="basic-addon2 ">Add Color</span>
-                                                        </div>
-
+                                                       
                                                     </div>
-                                                    <small id="emailHelp" class="form-text text-muted"
-                                                        style="margin-left:-3.5%">Product Colours should only be written
-                                                        in alphabets </small>
+                                                   
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <ul id="previewColor"></ul>
-                                                    <div id="colorContainer"></div>
-                                                </div>
+                                                
 
 
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
 
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Upload image of product</label>
@@ -144,18 +124,35 @@
                                                         <label class="custom-file-label" for="inputGroupFile04">Choose
                                                             file</label>
                                                     </div>
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text"
-                                                            id="inputGroupFileAddon04">Button</span>
-                                                    </div>
+                                                   
                                                 </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Product Status</label>
+                                                <div class="col-md-12">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" id="status"
+                                                            style="margin-left: -3.5%;" placeholder="<%= product.status %>"
+                                                            aria-label="aize" aria-describedby="basic-addon2">
+                                                       
+                                                    </div>
+                                                   
+                                                </div>
+                                                
+
+
                                             </div>
 
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Product Description</label>
-                                                <textarea class="form-control" id="productDescription"></textarea>
+                                                <textarea class="form-control" id="productDescription"><%= product.description %></textarea>
                                                 <small id="emailHelp" class="form-text text-muted">Product description
                                                     should be not more than 500 words</small>
                                             </div>
@@ -167,8 +164,7 @@
 
 
 
-                                    <button type="submit" class="btn btn-primary" style="margin-bottom:4%">Save
-                                        Product</button>
+                                    <button type="submit" class="btn btn-primary" style="margin-bottom:4%">Update Product</button>
                                 </form>
 
                             </div>
@@ -183,6 +179,4 @@
         </div>
         <!-- end app-container -->
         <!-- begin footer -->
-
         <%- include('admin_template/footer') %>
-           

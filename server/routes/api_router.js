@@ -9,5 +9,7 @@ const router = express.Router();
 router.post('/createAdmin',api_controller.createAdmin);
 router.post('/authAdminLogin',api_controller.auth_login);
 router.post('/uploadProducts',upload.single("image"), api_controller.uploadProducts);
+router.post('/editProduct',upload.single("image"),api_controller.editProduct)
+router.post('/deleteProduct',api_controller.deleteProduct);
 
 module.exports = router;
