@@ -17,5 +17,6 @@ router.get('/Dashboard',admin_jwt_token,controlPages.adminDashboard);
 router.get('/productUpload',admin_jwt_token,controlPages.uploadProducts);
 router.get('/viewproducts',admin_jwt_token,controlPages.viewProducts);
 router.get('/editproducts',admin_jwt_token,controlPages.edit_single_product);
+router.get('/banner',admin_jwt_token,controlPages.banner)
 router.get('/logout',controlPages.logout)
 module.exports = router;

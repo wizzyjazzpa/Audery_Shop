@@ -41,7 +41,7 @@ exports.uploadProducts = async (req, res) => {
     const des = req.body.description
     await product_model.create({ category: category, Name: name, price: price, quantity: quantity, sizes: size, color: color, image: image, description: des })
         .then(result => {
-            res.json({ status: "success", data: result, message: "Your product has been uploaded successfully" })
+            res.json({status: "success", data: result, message: "Your product has been uploaded successfully" })
         }).catch(err => {
             res.json({ error: err.message, status: 500 })
         })
@@ -57,8 +57,9 @@ exports.editProduct = async (req, res) => {
     const color = req.body.color;
     image = req.file.filename;
     const des = req.body.description;
+    const status = req.body.status;
     const id = req.body.id;
-    await product_model.updateOne({ _id: id }, { category: category, Name: name, price: price, quantity: quantity, sizes: size, color: color, image: image, description: des })
+    await product_model.updateOne({ _id: id }, { category: category, Name: name, price: price, quantity: quantity, sizes: size, color: color, image: image, description: des, status:status })
         .then(result => {
             res.json({ status: "success", message: "Producted has been updated successfully", result: result })
         }).catch(err => {
@@ -70,29 +71,32 @@ exports.editProduct = async (req, res) => {
 
 exports.deleteProduct = async (req, res) => {
     const id = req.body.id;
-    
+
     try {
-        const product = await product_model.findOne({_id:id});
+        const product = await product_model.findOne({ _id: id });
         if (!product) {
             console.log("product not found")
             res.status(404).json({ status: "error", message: "product not found" });
         }
-        const imagePath = path.join(process.cwd(),'public/uploads/', product.image);
+        const imagePath = path.join(process.cwd(), 'public/uploads/', product.image);
         //delete image if exists
         if (fs.existsSync(imagePath)) {
-            fs.unlinkSync(imagePath,(err)=>{
-                if(err) console.log('image delete err: ',err)
+            fs.unlinkSync(imagePath, (err) => {
+                if (err) console.log('image delete err: ', err)
             })
-        }else{
-             console.log('Image not found:', imagePath);
+        } else {
+            console.log('Image not found:', imagePath);
         }
-        const deleteproduct= await product_model.deleteOne({_id: id });
-        if(deleteproduct){
-                  res.json({staus:"success",message:"Product has been deleted Successfully"})
-        }else{
-                res.json({staus:"error",message:"failed to delete product"})
+        const deleteproduct = await product_model.deleteOne({ _id: id });
+        if (deleteproduct) {
+            res.json({ status: "success", message: "Product has been deleted Successfully" })
+        } else {
+            res.json({ status: "error", message: "failed to delete product" })
         }
     } catch (err) {
-             res.json({ error: err.message, status: 500 })
+        res.json({ error: err.message, status: 500 })
     }
+}
+exports.bigBannerUpload = async(req,res)=>{
+    console.log("FileName:"+req.file.filename);
 }

@@ -54,16 +54,18 @@ exports.adminDashboard = async (req, res) => {
      const locals = {
           title: "Dashboard"
      }
-     const getId = req.admin.id;
-     await admin_model.findOne({ _id: getId })
-          .then(result => {
+     try {
+          const getId = req.admin.id;
+          const result = await admin_model.findOne({ _id: getId })
+          const countProduct = await product_model.countDocuments();
+          res.render('admin/dashboard', { locals, result,countProduct });
 
-               res.render('admin/dashboard', { locals, result });
-          })
-          .catch(err => {
-               console.log(err.message);
-               res.json({ error: err.message })
-          })
+     } catch (err) {
+          console.log(err.message);
+          res.json({ error: err.message })
+     }
+
+
 
 
 }
@@ -91,7 +93,7 @@ exports.viewProducts = async (req, res) => {
      try {
           const result = await admin_model.findOne({ _id: getId });
           const products = await product_model.find();
-          res.render('admin/viewproducts', { locals, result,products });
+          res.render('admin/viewproducts', { locals, result, products });
      } catch (err) {
           console.log(err.message);
           res.json({ error: err.message })
@@ -100,30 +102,47 @@ exports.viewProducts = async (req, res) => {
 
 }
 
-exports.edit_single_product = async(req,res)=>{
-     locals={
-          title:"Edit Single Product"
-          
+exports.edit_single_product = async (req, res) => {
+     locals = {
+          title: "Edit Single Product"
+
      }
 
-      const getId = req.admin.id;
-      const productId = req.query.id;
-      
-           try{
-                  const result = await admin_model.findOne({ _id: getId });
-                  const product = await product_model.findOne({_id:req.query.id});
-                   res.render('admin/editproduct', 
-                    { 
-                         locals, 
-                         result,
-                          product
-                     });
-           }catch(err){
+     const getId = req.admin.id;
+     const productId = req.query.id;
 
-               console.log(err.message);
-              res.json({ error: err.message })
-           }
+     try {
+          const result = await admin_model.findOne({ _id: getId });
+          const product = await product_model.findOne({ _id: req.query.id });
+          res.render('admin/editproduct',
+               {
+                    locals,
+                    result,
+                    product
+               });
+     } catch (err) {
+
+          console.log(err.message);
+          res.json({ error: err.message })
+     }
 }
+ exports.banner = async(req,res)=>{
+
+     locals = {
+          title: "Banner"
+
+     }
+     const getId = req.admin.id;
+     await admin_model.findOne({ _id: getId })
+          .then(result => {
+
+               res.render('admin/Banners', { locals, result });
+          })
+          .catch(err => {
+               console.log(err.message);
+               res.json({ error: err.message })
+          })
+ }
 exports.logout = async (req, res) => {
      res.clearCookie("jwt_admin_token");
      res.redirect('/lockscreen');
