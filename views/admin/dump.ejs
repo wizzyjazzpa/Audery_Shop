@@ -205,4 +205,10 @@
                                         Product</button>
 
 
-                                        
+                                        .then(result=>{
+            const imagePath = path.join(__dirname,'..','uploads',product)
+          
+      }).catch(err=>{
+           res.json({ error: err.message, status: 500 })
+      })
+}
