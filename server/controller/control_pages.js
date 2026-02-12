@@ -3,21 +3,28 @@ const product_model = require('../models/products');
 exports.home = async (req, res) => {
      const locals = {
           title: "Home"
-     }
-     res.render('userPages/home', locals);
+     } 
+      try{
+            const getProduct = await product_model.find().sort({createdAt:-1}).limit(8);
+              res.render('userPages/home',{locals,getProduct});
+           
+      }catch(err){
+           res.status(500).json({error:err.message})
+      }
+   
 }
 exports.about = async (req, res) => {
      const locals = {
           title: "About"
      }
-     res.render('userPages/about', locals)
+     res.render('userPages/about-us', locals)
 }
 
 exports.contact = async (req, res) => {
      const locals = {
           title: "Contact"
      }
-     res.render('userPages/contact', locals)
+     res.render('userPages/contact-us', locals)
 }
 
 
@@ -25,9 +32,26 @@ exports.singleProduct = async (req, res) => {
      const locals = {
           title: "Single Product"
      }
-     res.render('userPages/product', locals)
+     try{
+             const productID = req.query.id;
+             const getSingle =  await product_model.findById(productID);
+             res.render('userPages/product',{locals,getSingle});
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+    
 }
-
+ exports.viewCart = async(req,res)=>{
+      const locals = {
+          title: "Cart"
+     }
+     try{
+             const productID = req.query.id;
+             res.render('userPages/cart',locals);
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+ }
 
 //ADMIN END
 

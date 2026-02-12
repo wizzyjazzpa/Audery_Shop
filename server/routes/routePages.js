@@ -6,7 +6,8 @@ const admin_jwt_token = require('../middleware/admin_token');
 router.get('/',controlPages.home);
 router.get('/about',controlPages.about);
 router.get('/contact',controlPages.contact);
-router.get('/product',controlPages.singleProduct);
+router.get('/single-product',controlPages.singleProduct);
+router.get('/cart',controlPages.viewCart);
 
 //Admin
 

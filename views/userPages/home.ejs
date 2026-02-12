@@ -1,1586 +1,657 @@
 <%- include('templates/header') %>
 
-        <main class="main">
+    <!--Body Content-->
+    <div id="page-content">
+        <!--Home slider-->
+        <div class="slideshow slideshow-wrapper pb-section">
+            <div class="home-slideshow">
+                <div class="slide">
+                    <div class="blur-up lazyload">
+                        <img class="blur-up lazyload"
+                            data-src="assets/images/slideshow-banners/home2-default-banner1.jpg"
+                            src="assets/images/slideshow-banners/home2-default-banner1.jpg"
+                            alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                            <div class="slideshow__text-content middle">
+                                <div class="container">
+                                    <div class="wrap-caption right">
+                                        <h2 class="h1 mega-title slideshow__title">Our New Collection</h2>
+                                        <span class="mega-subtitle slideshow__subtitle">Save up to 50% Off</span>
+                                        <span class="btn">Shop now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-up lazyload">
+                        <img class="blur-up lazyload"
+                            data-src="assets/images/slideshow-banners/home2-default-banner2.jpg"
+                            src="assets/images/slideshow-banners/home2-default-banner2.jpg"
+                            alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                        <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                            <div class="slideshow__text-content middle">
+                                <div class="container">
+                                    <div class="wrap-caption center">
+                                        <h2 class="h1 mega-title slideshow__title">Fashion &amp; Show</h2>
+                                        <span class="mega-subtitle slideshow__subtitle">A World Fashion and Trendy
+                                            Fashion Clother's</span>
+                                        <span class="btn">Shop now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Home slider-->
+        <!--Weekly Bestseller-->
+        <div class="section">
             <div class="container">
-                <div class="intro-slider-container slider-container-ratio mb-2">
-                    <div class="intro-slider owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": false}'>
-                        <div class="intro-slide">
-                            <figure class="slide-image">
-                                <picture>
-                                    <source media="(max-width: 480px)" srcset="assets/images/demos/demo-10/slider/slide-1-480w.jpg">
-                                    <img src="assets/images/demos/demo-10/slider/slide-1.jpg" alt="Image Desc">
-                                </picture>
-                            </figure><!-- End .slide-image -->
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">Weekly Bestseller</h2>
+                            <p>Our most popular products based on sales</p>
+                        </div>
+                        <div class="productSlider grid-products">
+                            <div class="col-12 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="product-layout-1.html" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image1.jpg"
+                                            src="assets/images/product-images/product-image1.jpg" alt="image"
+                                            title="product">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image1-1.jpg"
+                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
+                                            title="product">
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg"
+                                            src="assets/images/product-images/product-image1.jpg" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                        <!-- product label -->
+                                        <div class="product-labels rounded"><span class="lbl on-sale">Sale</span> <span
+                                                class="lbl pr-label1">new</span></div>
+                                        <!-- End product label -->
+                                    </a>
+                                    <!-- end product image -->
 
-                            <div class="intro-content">
-                                <h3 class="intro-subtitle">Deals and Promotions</h3><!-- End .h3 intro-subtitle -->
-                                <h1 class="intro-title text-white">Sneakers & Athletic Shoes</h1><!-- End .intro-title -->
+                                    <!-- countdown start -->
+                                    <div class="saleTime desktop" data-countdown="2022/03/01"></div>
+                                    <!-- countdown end -->
 
-                                <div class="intro-price text-white">from $9.99</div><!-- End .intro-price -->
-
-                                <a href="category.html" class="btn btn-white-primary btn-round">
-                                    <span>SHOP NOW</span>
-                                    <i class="icon-long-arrow-right"></i>
-                                </a>
-                            </div><!-- End .intro-content -->
-                        </div><!-- End .intro-slide -->
-
-                        <div class="intro-slide">
-                            <figure class="slide-image">
-                                <picture>
-                                    <source media="(max-width: 480px)" srcset="assets/images/demos/demo-10/slider/slide-2-480w.jpg">
-                                    <img src="assets/images/demos/demo-10/slider/slide-2.jpg" alt="Image Desc">
-                                </picture>
-                            </figure><!-- End .slide-image -->
-
-                            <div class="intro-content">
-                                <h3 class="intro-subtitle">Trending Now</h3><!-- End .h3 intro-subtitle -->
-                                <h1 class="intro-title text-white">This Week's Most Wanted</h1><!-- End .intro-title -->
-
-                                <div class="intro-price text-white">from $49.99</div><!-- End .intro-price -->
-
-                                <a href="category.html" class="btn btn-white-primary btn-round">
-                                    <span>SHOP NOW</span>
-                                    <i class="icon-long-arrow-right"></i>
-                                </a>
-                            </div><!-- End .intro-content -->
-                        </div><!-- End .intro-slide -->
-
-                        <div class="intro-slide">
-                            <figure class="slide-image">
-                                <picture>
-                                    <source media="(max-width: 480px)" srcset="assets/images/demos/demo-10/slider/slide-3-480w.jpg">
-                                    <img src="assets/images/demos/demo-10/slider/slide-3.jpg" alt="Image Desc">
-                                </picture>
-                            </figure><!-- End .slide-image -->
-
-                            <div class="intro-content">
-                                <h3 class="intro-subtitle text-white">Deals and Promotions</h3><!-- End .h3 intro-subtitle -->
-                                <h1 class="intro-title text-white">Can’t-miss Clearance:</h1><!-- End .intro-title -->
-
-                                <div class="intro-price text-white">starting at 60% off</div><!-- End .intro-price -->
-
-                                <a href="category.html" class="btn btn-white-primary btn-round">
-                                    <span>SHOP NOW</span>
-                                    <i class="icon-long-arrow-right"></i>
-                                </a>
-                            </div><!-- End .intro-content -->
-                        </div><!-- End .intro-slide -->
-                    </div><!-- End .intro-slider owl-carousel owl-simple -->
-                    <span class="slider-loader"></span><!-- End .slider-loader -->
-                </div><!-- End .intro-slider-container -->
-            </div><!-- End .container -->
-
-            <div class="banner-group">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="banner banner-overlay">
-                                        <a href="#">
-                                            <img src="assets/images/demos/demo-10/banners/banner-1.jpg" alt="Banner">
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                            Cart</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
                                         </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="product-layout-1.html">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="old-price">$500.00</span>
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded navy"
+                                            rel="assets/images/product-images/product-image-stw1.jpg"></li>
+                                        <li class="swatch small rounded green"
+                                            rel="assets/images/product-images/product-image-stw1-1.jpg"></li>
+                                        <li class="swatch small rounded gray"
+                                            rel="assets/images/product-images/product-image-stw1-2.jpg"></li>
+                                        <li class="swatch small rounded aqua"
+                                            rel="assets/images/product-images/product-image-stw1-3.jpg"></li>
+                                        <li class="swatch small rounded orange"
+                                            rel="assets/images/product-images/product-image-stw1-4.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-12 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="product-layout-1.html" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image2.jpg"
+                                            src="assets/images/product-images/product-image2.jpg" alt="image"
+                                            title="product">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image2-1.jpg"
+                                            src="assets/images/product-images/product-image2-1.jpg" alt="image"
+                                            title="product">
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg"
+                                            src="assets/images/product-images/product-image1.jpg" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                    </a>
+                                    <!-- end product image -->
 
-                                        <div class="banner-content banner-content-right">
-                                            <h4 class="banner-subtitle"><a href="#">New Arrivals</a></h4><!-- End .banner-subtitle -->
-                                            <h3 class="banner-title text-white"><a href="#">Sneakers & <br>Athletic Shoes</a></h3><!-- End .banner-title -->
-                                            <a href="#" class="btn btn-outline-white banner-link btn-round">Discover Now</a>
-                                        </div><!-- End .banner-content -->
-                                    </div><!-- End .banner -->
-                                </div><!-- End .col-sm-6 -->
-
-                                <div class="col-sm-6">
-                                    <div class="banner banner-overlay banner-overlay-light">
-                                        <a href="#">
-                                            <img src="assets/images/demos/demo-10/banners/banner-2.jpg" alt="Banner">
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Select
+                                            Options</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
                                         </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
 
-                                        <div class="banner-content">
-                                            <h4 class="banner-subtitle bright-black"><a href="#">Clearance</a></h4><!-- End .banner-subtitle -->
-                                            <h3 class="banner-title"><a href="#">Sandals</a></h3><!-- End .banner-title -->
-                                            <div class="banner-text"><a href="#">up to 70% off</a></div><!-- End .banner-text -->
-                                            <a href="#" class="btn btn-outline-gray banner-link btn-round">Shop Now</a>
-                                        </div><!-- End .banner-content -->
-                                    </div><!-- End .banner -->
-                                </div><!-- End .col-sm-6 -->
-                            </div><!-- End .row -->
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="product-layout-1.html">Elastic Waist Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$748.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded black"
+                                            rel="assets/images/product-images/product-image2.jpg"></li>
+                                        <li class="swatch small rounded navy"
+                                            rel="assets/images/product-images/product-image-swt2.jpg"></li>
+                                        <li class="swatch small rounded purple"
+                                            rel="assets/images/product-images/product-image-swt2-1.jpg"></li>
+                                        <li class="swatch small rounded teal"
+                                            rel="assets/images/product-images/product-image-swt2-2.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-12 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="product-layout-1.html" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image3.jpg"
+                                            src="assets/images/product-images/product-image3.jpg" alt="image"
+                                            title="product">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image3-1.jpg"
+                                            src="assets/images/product-images/product-image3-1.jpg" alt="image"
+                                            title="product">
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg"
+                                            src="assets/images/product-images/product-image3.jpg" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                        <!-- product label -->
+                                        <div class="product-labels rounded"><span class="lbl pr-label2">Hot</span></div>
+                                        <!-- End product label -->
+                                    </a>
+                                    <!-- end product image -->
 
-                            <div class="banner banner-large banner-overlay d-none d-sm-block">
-                                <a href="#">
-                                    <img src="assets/images/demos/demo-10/banners/banner-3.jpg" alt="Banner">
-                                </a>
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                            Cart</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
 
-                                <div class="banner-content">
-                                    <h4 class="banner-subtitle text-white"><a href="#">On Sale</a></h4><!-- End .banner-subtitle -->
-                                    <h3 class="banner-title text-white"><a href="#">Slip-On Loafers</a></h3><!-- End .banner-title -->
-                                    <div class="banner-text text-white"><a href="#">up to 30% off</a></div><!-- End .banner-text -->
-                                    <a href="#" class="btn btn-outline-white banner-link btn-round">Shop Now</a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-lg-8 -->
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="product-layout-1.html">3/4 Sleeve Kimono Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$550.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded gray"
+                                            rel="assets/images/product-images/product-image16.jpg"></li>
+                                        <li class="swatch small rounded red"
+                                            rel="assets/images/product-images/product-image5.jpg"></li>
+                                        <li class="swatch small rounded orange"
+                                            rel="assets/images/product-images/product-image5-1.jpg"></li>
+                                        <li class="swatch small rounded yellow"
+                                            rel="assets/images/product-images/product-image17.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-12 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="product-layout-1.html" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image4.jpg"
+                                            src="assets/images/product-images/product-image4.jpg" alt="image"
+                                            title="product" />
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image4-1.jpg"
+                                            src="assets/images/product-images/product-image4-1.jpg" alt="image"
+                                            title="product" />
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg"
+                                            src="assets/images/product-images/product-image3.jpg" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                        <!-- product label -->
+                                        <div class="product-labels rounded"><span class="lbl on-sale">Sale</span></div>
+                                        <!-- End product label -->
+                                    </a>
+                                    <!-- end product image -->
 
-                        <div class="col-lg-4 d-sm-none d-lg-block">
-                            <div class="banner banner-middle banner-overlay">
-                                <a href="#">
-                                    <img src="assets/images/demos/demo-10/banners/banner-4.jpg" alt="Banner">
-                                </a>
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                            Cart</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
 
-                                <div class="banner-content banner-content-bottom">
-                                    <h4 class="banner-subtitle text-white"><a href="#">On Sale</a></h4><!-- End .banner-subtitle -->
-                                    <h3 class="banner-title text-white"><a href="#">Amazing <br>Lace Up Boots</a></h3><!-- End .banner-title -->
-                                    <div class="banner-text text-white"><a href="#">from $39.00</a></div><!-- End .banner-text -->
-                                    <a href="#" class="btn btn-outline-white banner-link btn-round">Discover Now</a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-lg-4 -->
-                    </div><!-- End .row -->
-                </div><!-- End .container -->
-            </div><!-- End .banner-group -->
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="product-layout-1.html">Cape Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="old-price">$900.00</span>
+                                        <span class="price">$788.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded black"
+                                            rel="assets/images/product-images/cape-dress-2.jpg"></li>
+                                        <li class="swatch small rounded maroon"
+                                            rel="assets/images/product-images/product-image4-1.jpg"></li>
+                                        <li class="swatch small rounded navy"
+                                            rel="assets/images/product-images/product-image2.jpg"></li>
+                                        <li class="swatch small rounded darkgreen"
+                                            rel="assets/images/product-images/product-image2-1.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-12 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="product-layout-1.html" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image5.jpg"
+                                            src="assets/images/product-images/product-image5.jpg" alt="image"
+                                            title="product" />
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="assets/images/product-images/product-image5-1.jpg"
+                                            src="assets/images/product-images/product-image5-1.jpg" alt="image"
+                                            title="product" />
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg"
+                                            src="assets/images/product-images/product-image5.jpg" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                    </a>
+                                    <!-- end product image -->
 
-            <div class="icon-boxes-container icon-boxes-separator bg-transparent">
-                <div class="container">
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Select
+                                            Options</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="product-layout-1.html">Paper Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$550.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded gray"
+                                            rel="assets/images/product-images/product-image16.jpg"></li>
+                                        <li class="swatch small rounded red"
+                                            rel="assets/images/product-images/product-image5.jpg"></li>
+                                        <li class="swatch small rounded orange"
+                                            rel="assets/images/product-images/product-image5-1.jpg"></li>
+                                        <li class="swatch small rounded yellow"
+                                            rel="assets/images/product-images/product-image17.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Weekly Bestseller-->
+        <!--Parallax Section-->
+        <div class="section">
+            <div class="hero hero--large hero__overlay bg-size">
+                <img class="bg-img" src="assets/images/banner/banner1.avif" alt="" />
+                <div class="hero__inner">
+                    <div class="container">
+                        <div class="wrap-text left text-small font-bold">
+                            <h2 class="h2 mega-title">Belle <br> The best choice for your store</h2>
+                            <div class="rte-setting mega-subtitle">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                                the 1500s.</div>
+                            <a href="#" class="btn">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Parallax Section-->
+        <!--New Arrivals-->
+        <div class="product-rows section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">New Arrivals</h2>
+                            <p>Grab these new items before they are gone!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-products">
                     <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="icon-box icon-box-side">
-                                <span class="icon-box-icon text-primary">
-                                    <i class="icon-rocket"></i>
-                                </span>
 
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Free Shipping</h3><!-- End .icon-box-title -->
-                                    <p>Orders $50 or more</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
-                        
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="icon-box icon-box-side">
-                                <span class="icon-box-icon text-primary">
-                                    <i class="icon-rotate-left"></i>
-                                </span>
+                        <% getProduct.forEach( function (p) { %>
+                            <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="/single-product?id=<%= p._id %>" class="grid-view-item__link">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="uploads/<%= p.image %>"  src="uploads/<%= p.image %>" alt="image" title="product">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload"
+                                            data-src="uploads/<%= p.image %>"
+                                            src="uploads/<%= p.image %>" alt="image"
+                                            title="product">
+                                        <!-- End hover image -->
+                                        <!-- Variant Image-->
+                                        <img class="grid-view-item__image hover variantImg" src="uploads/<%= p.image %>" alt="image"
+                                            title="product">
+                                        <!-- Variant Image-->
+                                        <!-- product label -->
+                                        <div class="product-labels rounded"><span class="lbl on-sale">Sale</span> <span
+                                                class="lbl pr-label1">new</span></div>
+                                        <!-- End product label -->
+                                    </a>
+                                    <!-- end product image -->
 
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Free Returns</h3><!-- End .icon-box-title -->
-                                    <p>Within 30 days</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
+                                    <!-- countdown start -->
+                                    <div class="saleTime desktop" data-countdown="2022/03/01"></div>
+                                    <!-- countdown end -->
 
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="icon-box icon-box-side">
-                                <span class="icon-box-icon text-primary">
-                                    <i class="icon-info-circle"></i>
-                                </span>
+                                    <!-- Start product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
+                                        method="post">
+                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                            Cart</button>
+                                    </form>
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View"
+                                            class="quick-view-popup quick-view" data-toggle="modal"
+                                            data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html"
+                                                title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end product button -->
+                                </div>
+                                <!-- end product image -->
+                                <!--start product details -->
+                                <div class="product-details text-center">
+                                    <!-- product name -->
+                                    <div class="product-name">
+                                        <a href="/single-product"><%= p.Name %></a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="old-price">₦500.00</span>
+                                        <span class="price">₦<%= p.price %></span>
+                                    </div>
+                                    <!-- End product price -->
+                                    <!-- Color Variant -->
+                                    <ul class="swatches">
+                                        <li class="swatch small rounded navy"
+                                            rel="assets/images/product-images/product-image-stw1.jpg"></li>
+                                        <li class="swatch small rounded green"
+                                            rel="assets/images/product-images/product-image-stw1-1.jpg"></li>
+                                        <li class="swatch small rounded gray"
+                                            rel="assets/images/product-images/product-image-stw1-2.jpg"></li>
+                                        <li class="swatch small rounded aqua"
+                                            rel="assets/images/product-images/product-image-stw1-3.jpg"></li>
+                                        <li class="swatch small rounded orange"
+                                            rel="assets/images/product-images/product-image-stw1-4.jpg"></li>
+                                    </ul>
+                                    <!-- End Variant -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
 
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Get 20% Off 1 Item</h3><!-- End .icon-box-title -->
-                                    <p>when you sign up</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
 
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="icon-box icon-box-side">
-                                <span class="icon-box-icon text-primary">
-                                    <i class="icon-life-ring"></i>
-                                </span>
 
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">We Support</h3><!-- End .icon-box-title -->
-                                    <p>24/7 amazing services</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
-                    </div><!-- End .row -->
-                </div><!-- End .container -->
-            </div><!-- End .icon-boxes-container -->
+                            <% }) %>
+                                <!-- start product image -->
 
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <a href="shop-left-sidebar.html" class="btn">View all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Featured Product-->
+
+        <!--Logo Slider-->
+        <div class="section logo-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="banner banner-cat">
-                            <a href="#">
-                                <img src="assets/images/demos/demo-10/banners/banner-5.jpg" alt="Banner">
-                            </a>
-
-                            <div class="banner-content banner-content-overlay text-center">
-                                <h3 class="banner-title font-weight-normal">Women's</h3><!-- End .banner-title -->
-                                <h4 class="banner-subtitle">125 Products</h4><!-- End .banner-subtitle -->
-                                <a href="category.html" class="banner-link">SHOP NOW</a>
-                            </div><!-- End .banner-content -->
-                        </div><!-- End .banner -->
-                    </div><!-- End .col-md-4 -->
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="banner banner-cat">
-                            <a href="#">
-                                <img src="assets/images/demos/demo-10/banners/banner-6.jpg" alt="Banner">
-                            </a>
-
-                            <div class="banner-content banner-content-overlay text-center">
-                                <h3 class="banner-title font-weight-normal">Men's</h3><!-- End .banner-title -->
-                                <h4 class="banner-subtitle">97 Products</h4><!-- End .banner-subtitle -->
-                                <a href="category.html" class="banner-link">SHOP NOW</a>
-                            </div><!-- End .banner-content -->
-                        </div><!-- End .banner -->
-                    </div><!-- End .col-md-4 -->
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="banner banner-cat">
-                            <a href="#">
-                                <img src="assets/images/demos/demo-10/banners/banner-7.jpg" alt="Banner">
-                            </a>
-
-                            <div class="banner-content banner-content-overlay text-center">
-                                <h3 class="banner-title font-weight-normal">Kid's</h3><!-- End .banner-title -->
-                                <h4 class="banner-subtitle">48 Products</h4><!-- End .banner-subtitle -->
-                                <a href="category.html" class="banner-link">SHOP NOW</a>
-                            </div><!-- End .banner-content -->
-                        </div><!-- End .banner -->
-                    </div><!-- End .col-md-4 -->
-                </div><!-- End .row -->
-            </div><!-- End .container -->
-
-            <div class="mb-4"></div><!-- End .mb-4 -->
-
-            <div class="container">
-                <div class="heading heading-center mb-3">
-                    <h2 class="title-lg mb-2">Top Selling Products</h2><!-- End .title-lg text-center -->
-
-                    <ul class="nav nav-pills justify-content-center" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="top-all-link" data-toggle="tab" href="#top-all-tab" role="tab" aria-controls="top-all-tab" aria-selected="true">All</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="top-women-link" data-toggle="tab" href="#top-women-tab" role="tab" aria-controls="top-women-tab" aria-selected="false">Women's</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="top-men-link" data-toggle="tab" href="#top-men-tab" role="tab" aria-controls="top-men-tab" aria-selected="false">Men's</a>
-                        </li>
-                    </ul>
-                </div><!-- End .heading -->
-
-                <div class="tab-content">
-                    <div class="tab-pane p-0 fade show active" id="top-all-tab" role="tabpanel" aria-labelledby="top-all-link">
-                        <div class="products just-action-icons-sm">
-                            <div class="row">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">30% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-5.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-countdown-container">
-                                                <span class="product-contdown-title">offer ends in:</span>
-                                                <div class="product-countdown countdown-compact" data-until="2019, 11, 3" data-compact="true"></div><!-- End .product-countdown -->
-                                            </div><!-- End .product-countdown-container -->
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">ASICS Tiger Gel-Lyte MT</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $77.99</span>
-                                                <span class="old-price">$130.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #af5f23;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #806f55;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-6.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sandals</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Eric Michael Sandra</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $42.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                            
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-7.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Jessica Simpson Blayke</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #cc6666;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #ccccff;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-8.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #ffca51;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #bb8379;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-9.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">The North Face Raedonda Boot Sneaker</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-10.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $57.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-11.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Splendid Roselyn II</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 3 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #78645f;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #b89474;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">55% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-12.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Marc Jacobs Somewhere Sport Sandal</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $125.99</span>
-                                                <span class="old-price">$275.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-13.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Mules</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Crocs Crocband Clog</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $25.75
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 7 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-14.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Vasque Sundowner GTX</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $109.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
-                    </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="top-women-tab" role="tabpanel" aria-labelledby="top-women-link">
-                        <div class="products just-action-icons-sm">
-                            <div class="row">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-8.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #ffca51;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #bb8379;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-10.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $57.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-11.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Splendid Roselyn II</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 3 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #78645f;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #b89474;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-                                
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-6.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sandals</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Eric Michael Sandra</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $42.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                            
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">30% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-5.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-countdown-container">
-                                                <span class="product-contdown-title">offer ends in:</span>
-                                                <div class="product-countdown countdown-compact" data-until="2019, 11, 3" data-compact="true"></div><!-- End .product-countdown -->
-                                            </div><!-- End .product-countdown-container -->
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">ASICS Tiger Gel-Lyte MT</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $77.99</span>
-                                                <span class="old-price">$130.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #af5f23;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #806f55;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-9.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">The North Face Raedonda Boot Sneaker</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-7.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Jessica Simpson Blayke</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #cc6666;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #ccccff;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">55% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-12.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Marc Jacobs Somewhere Sport Sandal</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $125.99</span>
-                                                <span class="old-price">$275.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-13.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Mules</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Crocs Crocband Clog</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $25.75
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 7 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-14.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Vasque Sundowner GTX</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $109.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
-                    </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="top-men-tab" role="tabpanel" aria-labelledby="top-men-link">
-                        <div class="products just-action-icons-sm">
-                            <div class="row">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-10.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $57.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">30% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-5.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-countdown-container">
-                                                <span class="product-contdown-title">offer ends in:</span>
-                                                <div class="product-countdown countdown-compact" data-until="2019, 11, 3" data-compact="true"></div><!-- End .product-countdown -->
-                                            </div><!-- End .product-countdown-container -->
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">ASICS Tiger Gel-Lyte MT</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $77.99</span>
-                                                <span class="old-price">$130.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #af5f23;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #806f55;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-11.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Splendid Roselyn II</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 3 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #78645f;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #b89474;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-6.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Sandals</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Eric Michael Sandra</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $42.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                            
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-7.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Jessica Simpson Blayke</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #cc6666;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #ccccff;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-8.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Sneakers</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Native Shoes Miles Denim Print</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $20.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #ffca51;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #bb8379;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-9.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">The North Face Raedonda Boot Sneaker</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $97.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 4 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-14.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Men’s</a>,
-                                                <a href="#">Boots</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Vasque Sundowner GTX</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $109.99
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">Sale</span>
-                                            <span class="product-label label-sale">55% off</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-12.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Heels</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Marc Jacobs Somewhere Sport Sandal</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">Now $125.99</span>
-                                                <span class="old-price">$275.00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 0 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-3 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-primary">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-10/products/product-13.jpg" alt="Product image" class="product-image">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Women’s</a>,
-                                                <a href="#">Mules</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Crocs Crocband Clog</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $25.75
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-
-                                        <div class="product-footer">
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 7 Reviews )</span>
-                                            </div><!-- End .rating-container -->
-
-                                            <div class="product-action">
-                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                            </div><!-- End .product-action -->
-                                        </div><!-- End .product-footer -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
-                    </div><!-- .End .tab-pane -->
-                </div><!-- End .tab-content -->
-
-                <div class="more-container text-center mt-5">
-                    <a href="category.html" class="btn btn-outline-lightgray btn-more btn-round"><span>View more products</span><i class="icon-long-arrow-right"></i></a>
-                </div><!-- End .more-container -->
-            </div><!-- End .container -->
-
-            <div class="mb-5"></div><!-- End .mb5 -->
-
-            <div class="container">
-                <div class="cta cta-horizontal cta-horizontal-box bg-image mb-4 mb-lg-6" style="background-image: url(assets/images/demos/demo-10/bg-1.jpg);">
-                    <div class="row flex-column flex-lg-row align-items-lg-center">
-                        <div class="col">
-                            <h3 class="cta-title text-primary">New Deals! Start Daily at 12pm e.t.</h3><!-- End .cta-title -->
-                            <p class="cta-desc">Get <em class="font-weight-medium">FREE SHIPPING* & 5% rewards</em> on every order with Molla Theme rewards program</p><!-- End .cta-desc -->
-                        </div><!-- End .col -->
-                        
-                        <div class="col-auto">
-                            <a href="#" class="btn btn-white-primary btn-round"><span>Add to Cart for $50.00/yr</span><i class="icon-long-arrow-right"></i></a>
-                        </div><!-- End .col-auto -->
-                    </div><!-- End .row -->
-                </div><!-- End .cta-horizontal -->
-            </div><!-- End .container -->
-
-            
-        </main><!-- End .main -->
-
-         <%- include('templates/footer') %>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">The Most Loved Brands</h2>
+                        </div>
+                        <div class="logo-bar">
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo1.png" alt="" title="" />
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo2.png" alt="" title="" />
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo3.png" alt="" title="" />
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo4.png" alt="" title="" />
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo5.png" alt="" title="" />
+                            </div>
+                            <div class="logo-bar__item">
+                                <img src="assets/images/logo/brandlogo6.png" alt="" title="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Logo Slider-->
+    </div>
+    <!--End Body Content-->
+
+    <%- include('templates/footer') %>
