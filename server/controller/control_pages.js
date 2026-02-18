@@ -41,6 +41,19 @@ exports.singleProduct = async (req, res) => {
      }
     
 }
+
+exports.products = async(req,res)=>{
+     
+     const locals = {
+          title: "Products"
+     }
+     try{
+            const allProducts = await product_model.find();
+             res.render('userPages/products',{locals,allProducts});
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+}
  exports.viewCart = async(req,res)=>{
       const locals = {
           title: "Cart"
@@ -52,7 +65,47 @@ exports.singleProduct = async (req, res) => {
          res.status(500).json({error:err.message});
      }
  }
+ exports.login = async(req,res)=>{
 
+
+      const locals = {
+          title: "Login"
+     }
+     try{
+            
+             res.render('userPages/login',locals);
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+ }
+
+  exports.register = async(req,res)=>{
+
+
+      const locals = {
+          title: "Registration"
+     }
+     try{
+            
+             res.render('userPages/register',locals);
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+ }
+
+ exports.checkout = async(req,res)=>{
+
+
+      const locals = {
+          title: "Checkout"
+     }
+     try{
+            
+             res.render('userPages/checkout',locals);
+     }catch(err){
+         res.status(500).json({error:err.message});
+     }
+ }
 //ADMIN END
 
 

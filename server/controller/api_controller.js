@@ -85,7 +85,7 @@ exports.deleteProduct = async (req, res) => {
                 if (err) console.log('image delete err: ', err)
             })
         } else {
-            console.log('Image not found:', imagePath);
+             console.log('Image not found:', imagePath);
         }
         const deleteproduct = await product_model.deleteOne({ _id: id });
         if (deleteproduct) {

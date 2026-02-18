@@ -3,6 +3,7 @@ $(document).ready(function () {
     displayCart();
     displayCart_table();
     updateCartCount();
+    updateTotal();
     
     $('#add_cart').on('click', function () {
         const product_id = $('#product_id').val();
@@ -163,29 +164,29 @@ function displayCart_table() {
                                     </td>
                                     <td class="cart__meta small--text-left cart-flex-item">
                                         <div class="list-view-item__title">
-                                            <a href="#">Elastic Waist Dress </a>
+                                            <a href="#">${item.productName} </a>
                                         </div>
                                         
                                         <div class="cart__meta-text">
-                                            Color: Navy<br>Size: Small<br>
+                                            <br>Size: ${item.size}<br>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item">
-                                        <span class="money">$735.00</span>
+                                       ₦<span class="money">${item.productPrice.toLocaleString()}</span>
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
                                         <div class="cart__qty text-center">
                                             <div class="qtyField">
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
-                                                <input class="cart__qty-input qty" type="text" name="updates[]" id="qty" value="1" pattern="[0-9]*">
+                                                <input class="cart__qty-input qty" type="text" name="updates[]" id="qty" value="${item.qty}" pattern="[0-9]*">
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="text-right small--hide cart-price">
-                                        <div><span class="money">$735.00</span></div>
+                                        <div>₦<span class="money">${item.productPrice.toLocaleString()}</span></div>
                                     </td>
-                                    <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
+                                    <td class="text-center small--hide"><a  class="btn btn--secondary cart__remove" title="Remove item"><i class="icon icon anm anm-times-l"></i></a></td>
                                 </tr>
 
         `;
@@ -199,7 +200,49 @@ function displayCart_table() {
     $('#subtotal').text(subtotal.toLocaleString());
 }
 
+$('#display_cart_table').on('click', '.cart__remove', function() {
+    alert(" i am  here to remove cart")
+     const index = $(this).data('index');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Remove the item at that index
+    cart.splice(index, 1);
+
+    // Update localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Refresh the cart display
+    displayCart_table();
+});
+ $('#clear_cart').on('click',function(e){
+    e.preventDefault();
+      localStorage.removeItem('cart');
+      displayCart();
+    displayCart_table();
+    updateCartCount();
+ })
+
+ function calculateGrandTotal(){
+     const subtotal = calculateSubtotal();
+     const shipping =2000;
+     const taxRate = 0.05;
+
+     const tax = subtotal * taxRate;
+     const grandTotal = subtotal + shipping+tax;
+     return {subtotal,shipping,tax,grandTotal};
+     
+ }
+
+  function updateTotal(){
+     const totals = calculateGrandTotal();
+     $('#sub').text("₦"+totals.subtotal.toLocaleString())
+     $('#tax').text("₦"+totals.tax.toLocaleString());
+     $('#grand_total').text("₦"+totals.grandTotal.toLocaleString());
+  }
+
+  $('#cartCheckout').on('click',function(){
+     window.location.href='/checkout'
+  })
 
 
 

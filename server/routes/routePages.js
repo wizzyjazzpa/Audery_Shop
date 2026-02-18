@@ -7,7 +7,11 @@ router.get('/',controlPages.home);
 router.get('/about',controlPages.about);
 router.get('/contact',controlPages.contact);
 router.get('/single-product',controlPages.singleProduct);
+router.get('/products',controlPages.products);
 router.get('/cart',controlPages.viewCart);
+router.get('/login',controlPages.login);
+router.get('/register',controlPages.register);
+router.get('/checkout',controlPages.checkout)
 
 //Admin
 

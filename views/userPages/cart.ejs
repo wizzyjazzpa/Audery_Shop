@@ -34,7 +34,7 @@
                                 <tr>
                                     <td colspan="3" class="text-left"><a href="" class="btn btn-secondary btn--small cart-continue">Continue shopping</a></td>
                                     <td colspan="3" class="text-right">
-	                                    <button type="submit" name="clear" class="btn btn-secondary btn--small  small--hide">Clear Cart</button>
+	                                    <button name="clear" id="clear_cart" class="btn btn-secondary btn--small  small--hide ">Clear Cart</button>
                                     	<button type="submit" name="update" class="btn btn-secondary btn--small cart-continue ml-2">Update Cart</button>
                                     </td>
                                 </tr>
@@ -305,12 +305,12 @@
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
                             <div class="solid-border">	
                               <div class="row border-bottom pb-2">
-                                <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                                <span class="col-12 col-sm-6 text-right"><span class="money">$735.00</span></span>
+                                <span class="col-12 col-sm-6 cart__subtotal-title" >Subtotal</span>
+                                <span class="col-12 col-sm-6 text-right" id="sub"></span>
                               </div>
                               <div class="row border-bottom pb-2 pt-2">
                                 <span class="col-12 col-sm-6 cart__subtotal-title">Tax</span>
-                                <span class="col-12 col-sm-6 text-right">$10.00</span>
+                                <span class="col-12 col-sm-6 text-right" ><span id="tax" ></span></span>
                               </div>
                               <div class="row border-bottom pb-2 pt-2">
                                 <span class="col-12 col-sm-6 cart__subtotal-title">Shipping</span>
@@ -318,18 +318,18 @@
                               </div>
                               <div class="row border-bottom pb-2 pt-2">
                                 <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                                <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">$1001.00</span></span>
+                                <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money" id="grand_total"></span></span>
                               </div>
                               <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                               <p class="cart_tearm">
                                 <label>
-                                  <input type="checkbox" name="tearm" class="checkbox" value="tearm" required="">
+                                  <input type="checkbox" name="tearm" class="checkbox" value="tearm" required>
                                   I agree with the terms and conditions
 								</label>
                               </p>
-                              <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed To Checkout" disabled="disabled">
+                              <button type="button" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout"  >Proceed To Checkout</button>
                               <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
-                              <p><a href="#;">Checkout with Multiple Addresses</a></p>
+                              <p><a href="/checkout">Checkout with Multiple Addresses</a></p>
                             </div>
         
                         </div>
