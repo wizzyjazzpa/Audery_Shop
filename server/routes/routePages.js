@@ -2,6 +2,7 @@ const express  = require('express');
 const router = express.Router();
 const controlPages = require('../controller/control_pages');
 const admin_jwt_token = require('../middleware/admin_token');
+const user_jwt_token = require('../middleware/user_token');
 
 router.get('/',controlPages.home);
 router.get('/about',controlPages.about);

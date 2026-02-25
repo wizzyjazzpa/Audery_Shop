@@ -1,12 +1,20 @@
 const admin_model = require('../models/register_admin');
 const product_model = require('../models/products');
+const user_model = require('../models/users')
 exports.home = async (req, res) => {
      const locals = {
           title: "Home"
      } 
-      try{
+      try{   
+            
+          
             const getProduct = await product_model.find().sort({createdAt:-1}).limit(8);
-              res.render('userPages/home',{locals,getProduct});
+              res.render('userPages/home',
+               {
+                    locals,
+                    getProduct,
+                    
+               });
            
       }catch(err){
            res.status(500).json({error:err.message})
@@ -100,8 +108,14 @@ exports.products = async(req,res)=>{
           title: "Checkout"
      }
      try{
-            
-             res.render('userPages/checkout',locals);
+             if(res.locals.user == null){
+                 return res.redirect('/login')
+             }else{
+                     const userID = res.locals.user.id;
+                     const userDetails= await user_model.findOne({_id:userID}); 
+                      res.render('userPages/checkout',{locals,userDetails});
+             }
+           
      }catch(err){
          res.status(500).json({error:err.message});
      }

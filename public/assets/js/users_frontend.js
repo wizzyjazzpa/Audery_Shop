@@ -4,7 +4,8 @@ $(document).ready(function () {
     displayCart_table();
     updateCartCount();
     updateTotal();
-    
+    diplayCheckOutCart();
+
     $('#add_cart').on('click', function () {
         const product_id = $('#product_id').val();
         const product_price = Number($('#product_price').text().replace(/,/g, ''));
@@ -17,7 +18,7 @@ $(document).ready(function () {
             productPrice: product_price,
             size: $('input[name="option-1"]:checked').val(),
             qty: quantity,
-            image:image
+            image: image
         };
 
         if (!product.size) {
@@ -38,11 +39,44 @@ $(document).ready(function () {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
+
         updateCartCount();
-         displayCart();
+        displayCart();
     });
 
 })
+
+
+function diplayCheckOutCart(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    
+    const $cartTable = $('#checkout_table');
+    $cartTable.empty(); // Clear existing list
+
+    if (!cart || cart.length === 0) {
+        $cartTable.append("<tr><td><p class='alert alert-info'>Your cart is empty</p></td></tr>");
+        $('#subtotal').text('0');
+        return;
+    }
+     cart.forEach(function(item,index){
+         const total = item.productPrice * item.qty;
+         const tbody= ` <tr>
+                                            <td class="text-left">${item.productName}</td>
+                                            <td>₦${item.productPrice.toLocaleString()}</td>
+                                            <td>${item.size}</td>
+                                            <td>${item.qty}</td>
+                                            <td>₦${total.toLocaleString()}</td>
+                                        </tr>
+                                       
+                                        
+                                        `
+         $cartTable.append(tbody);
+        const subtotal = calculateSubtotal();
+        $('#total').text("₦"+subtotal.toLocaleString());
+
+     })
+      
+}
 
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -61,13 +95,13 @@ function displayCart() {
 
     const $cartList = $('#display_cart');
     $cartList.empty(); // Clear existing list
-    
+
     if (!cart || cart.length === 0) {
         $cartList.append('<li>Your cart is empty</li>');
         $('#subtotal').text('0');
         return;
     }
-     
+
     cart.forEach(function (item, index) {
         const total = item.productPrice * item.qty;
 
@@ -105,7 +139,7 @@ function displayCart() {
         $('#subtotal').text(subtotal);
         // alert(item.productPrice)
     });
-     const subtotal = cart.reduce((acc, item) => acc + item.productPrice * item.qty, 0);
+    const subtotal = cart.reduce((acc, item) => acc + item.productPrice * item.qty, 0);
     $('#subtotal').text(subtotal.toLocaleString());
 }
 
@@ -114,7 +148,7 @@ function calculateSubtotal() {
 
     let subtotal = 0;
 
-    cart.forEach(function(item) {
+    cart.forEach(function (item) {
         subtotal += item.productPrice * item.qty;
     });
 
@@ -125,7 +159,7 @@ function calculateSubtotal() {
 //remove item from cart
 
 // Use delegated event because items are dynamic
-$('#display_cart').on('click', '.remove', function() {
+$('#display_cart').on('click', '.remove', function () {
     const index = $(this).data('index');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -140,20 +174,19 @@ $('#display_cart').on('click', '.remove', function() {
 });
 
 
-
 function displayCart_table() {
     let cart = JSON.parse(localStorage.getItem('cart'));
-   
+
 
     const $cartTable = $('#display_cart_table');
     $cartTable.empty(); // Clear existing list
-    
+
     if (!cart || cart.length === 0) {
         $cartTable.append("<tr><td><p class='alert alert-info'>Your cart is empty</p></td></tr>");
         $('#subtotal').text('0');
         return;
     }
-     
+
     cart.forEach(function (item, index) {
         const total = item.productPrice * item.qty;
 
@@ -196,13 +229,13 @@ function displayCart_table() {
         $('#subtotal').text(subtotal);
         // alert(item.productPrice)
     });
-     const subtotal = cart.reduce((acc, item) => acc + item.productPrice * item.qty, 0);
+    const subtotal = cart.reduce((acc, item) => acc + item.productPrice * item.qty, 0);
     $('#subtotal').text(subtotal.toLocaleString());
 }
 
-$('#display_cart_table').on('click', '.cart__remove', function() {
-    alert(" i am  here to remove cart")
-     const index = $(this).data('index');
+$('#display_cart_table').on('click', '.cart__remove', function () {
+
+    const index = $(this).data('index');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Remove the item at that index
@@ -214,35 +247,165 @@ $('#display_cart_table').on('click', '.cart__remove', function() {
     // Refresh the cart display
     displayCart_table();
 });
- $('#clear_cart').on('click',function(e){
+$('#clear_cart').on('click', function (e) {
     e.preventDefault();
-      localStorage.removeItem('cart');
-      displayCart();
+    localStorage.removeItem('cart');
+    displayCart();
     displayCart_table();
     updateCartCount();
- })
+})
 
- function calculateGrandTotal(){
-     const subtotal = calculateSubtotal();
-     const shipping =2000;
-     const taxRate = 0.05;
+function calculateGrandTotal() {
+    const subtotal = calculateSubtotal();
+    const shipping = 2000;
+    const taxRate = 0.05;
 
-     const tax = subtotal * taxRate;
-     const grandTotal = subtotal + shipping+tax;
-     return {subtotal,shipping,tax,grandTotal};
+    const tax = subtotal * taxRate;
+    const grandTotal = subtotal + shipping + tax;
+    return { subtotal, shipping, tax, grandTotal };
+
+}
+
+function updateTotal() {
+    const totals = calculateGrandTotal();
+    $('#sub').text("₦" + totals.subtotal.toLocaleString())
+    $('#tax').text("₦" + totals.tax.toLocaleString());
+    $('#grand_total').text("₦" + totals.grandTotal.toLocaleString());
+}
+
+$('#cartCheckout').on('click', function () {
+    window.location.href = '/checkout'
+})
+
+$('#CustomerLoginForm').on('submit', function (e) {
+    e.preventDefault();
+    let firstname = $('#FirstName').val();
+    let lastname = $('#LastName').val();
+    let email = $('#CustomerEmail').val();
+    let password = $('#CustomerPassword').val();
+    $.ajax({
+        url: "/api/registerUsers",
+        type: "post",
+        contentType: "application/json",
+        data: JSON.stringify({ firstname, lastname, email, password }),
+        success: function (data) {
+            if (data.message == "successfull") {
+
+                $('#preloader').fadeIn();
+
+                // Redirect after 2 seconds
+                setTimeout(function () {
+                    window.location.href = '/login';
+                }, 2000);
+
+            } else if (data.status == 500) {
+                $('#msg').html(`<p class="alert alert-info">user ${email} already exists</p>`)
+                console.log(`Email ${email} already exists`)
+            }
+        },
+        error: function (xhr) {
+            console.log("database error has ocuured: ", xhr.status, xhr.responseText)
+        }
+    })
+})
+
+$('#CustomerLoginForm2').on('submit', function (e) {
+    e.preventDefault();
+      let email = $('#CustomerEmail').val();
+    let password = $('#CustomerPassword').val();
+    if (email === "" && passowrd === "") {
+        $('#msg').html(`<p class="alert alert-danger">All input fields must be filled</p>`);
+    } else {
+        $.ajax({
+            url: "/api/userlogin",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({ email, password }),
+            success: function (data) {
+                if (data.status == 200) {
+                    console.log(data.token)
+                    $('#preloader').fadeIn();
+
+                    // Redirect after 2 seconds
+                    setTimeout(function () {
+                        window.location.href = '/';
+                    }, 2000);
+                } else {
+                    $('#msg').html(`<p class="alert alert-danger">incorrect email/password</p>`);
+                }
+            },
+            error: function (xhr) {
+                console.log("Error:", xhr.status, xhr.responseText);
+            }
+
+        });
+    }
+
+})
+
+$('#country').on('change',function(){
+     let countryCode = $(this).val();
+     $('#state').html('<option>Loadig......</option>');
+     $.get(`/api/states/${countryCode}`,function(data){
+
+        let options ="<option value=''></option>";
+        data.forEach(function(state){
+             options +=`<option value="${state.name}" selected>${state.name}</option>`
+        });
+
+        $('#state').html(options)
+
+     });
+})
+
+//submit data in cart to database
+
+$('#order').on('submit',function(e){
+    e.preventDefault();
+    let userid = $('#userid').val();
+    let firstname = $('#firstname').val();
+    let lastname = $('#lastname').val();
+    let email = $('#email').val();
+    let  tel = $('#telephone').val();
+    let city = $('#city').val();
+    let postalcode = $('#postcode').val();
+    let country = $('#country').val();
+    let state = $('#state').val();
+    let address = $('#address').val();
      
- }
+    let cart = JSON.parse(localStorage.getItem('cart'));
 
-  function updateTotal(){
-     const totals = calculateGrandTotal();
-     $('#sub').text("₦"+totals.subtotal.toLocaleString())
-     $('#tax').text("₦"+totals.tax.toLocaleString());
-     $('#grand_total').text("₦"+totals.grandTotal.toLocaleString());
-  }
+    if (!cart || cart.length === 0) {
+        alert("Cart is empty");
+        return;
+    }
 
-  $('#cartCheckout').on('click',function(){
-     window.location.href='/checkout'
-  })
+    $.ajax({
+        url: "/api/place_order",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({ cart, userid,firstname,lastname,email,tel,city,postalcode,country,state,address }),
+
+        success: function (res) {
+            if (res.status === 200) {
+                alert("Order placed successfully");
+
+                // Clear cart after successful order
+                localStorage.removeItem('cart');
+
+                window.location.href = "/order-success";
+            }
+        },
+
+        error: function (err) {
+            console.log(err);
+        }
+    });
+
+
+
+})
+
 
 
 

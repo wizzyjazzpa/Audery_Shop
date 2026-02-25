@@ -4,7 +4,11 @@ const router = express.Router();
  const upload = require('../middleware/upload');
 
 
-
+//users endpoint
+router.post('/registerUsers',api_controller.registerUsers);
+router.post('/userlogin',api_controller.userlogin);
+router.get('/states/:countryCode',api_controller.getCountrySate);
+router.post('/place_order',api_controller.oderedItems);
 
 router.post('/createAdmin',api_controller.createAdmin);
 router.post('/authAdminLogin',api_controller.auth_login);

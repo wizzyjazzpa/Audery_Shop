@@ -2,6 +2,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./server/config/db');
+const verify_user_token = require('./server/middleware/user_token');
 require ('dotenv').config();
 
 
@@ -12,6 +13,7 @@ const port =  process.env.PORT
 connectDB();
 
 app.use(cookieParser());
+app.use(verify_user_token);
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
