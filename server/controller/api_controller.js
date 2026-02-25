@@ -123,7 +123,15 @@ exports.oderedItems = async(req,res)=>{
        }
 
 }
-
+ exports.mostClick = async(req,res)=>{
+        try{
+                await product_model.findByIdAndUpdate(req.params.id,{$inc:{clicks:1}});
+                res.json({success:true});
+        }catch(err){
+             console.log(err.message);
+             res.status(500).json({success:false});
+        }
+ }
 // ADMIN
 exports.createAdmin = async (req, res) => {
     const { username, password } = req.body;

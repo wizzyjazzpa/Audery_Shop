@@ -38,6 +38,10 @@ const productSchema = new schema({
          type :String,
          default:"New"
     },
+    clicks:{
+        type:Number,
+        default:0
+    },
 
     createdAt: {
         type: String,
@@ -48,7 +52,7 @@ const productSchema = new schema({
                 year: "numeric"
             })
     }
-})
+},{timestamps:true})
 
 
 module.exports = mongoose.model("product", productSchema)

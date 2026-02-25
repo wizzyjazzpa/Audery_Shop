@@ -9,10 +9,12 @@ exports.home = async (req, res) => {
             
           
             const getProduct = await product_model.find().sort({createdAt:-1}).limit(8);
+             const trendingProducts = await product_model.find({ clicks:{$gt:5}}).sort({clicks: -1}).limit(4);
               res.render('userPages/home',
                {
                     locals,
                     getProduct,
+                    trendingProducts
                     
                });
            

@@ -5,7 +5,14 @@ $(document).ready(function () {
     updateCartCount();
     updateTotal();
     diplayCheckOutCart();
+    disable_btn_order();
 
+     function disable_btn_order(){
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        if(!cart || cart.length ===0){
+            $('#btn_order').prop('disabled',true);
+        }
+     }
     $('#add_cart').on('click', function () {
         const product_id = $('#product_id').val();
         const product_price = Number($('#product_price').text().replace(/,/g, ''));
@@ -171,6 +178,8 @@ $('#display_cart').on('click', '.remove', function () {
 
     // Refresh the cart display
     displayCart();
+    updateCartCount();
+    disable_btn_order();
 });
 
 
@@ -246,6 +255,7 @@ $('#display_cart_table').on('click', '.cart__remove', function () {
 
     // Refresh the cart display
     displayCart_table();
+    disable_btn_order();
 });
 $('#clear_cart').on('click', function (e) {
     e.preventDefault();
@@ -392,8 +402,7 @@ $('#order').on('submit',function(e){
 
                 // Clear cart after successful order
                 localStorage.removeItem('cart');
-
-                window.location.href = "/order-success";
+                alert("Thanks for shopping with Audrey's Store");
             }
         },
 
@@ -406,6 +415,19 @@ $('#order').on('submit',function(e){
 
 })
 
+// most click products
+ $('.product_link').on('click',function(){
+
+     const productId = $(this).data('id');
+     let clickedProducts = JSON.parse(localStorage.getItem('clickedProducts')) ||[];
+     if(!clickedProducts.includes(productId)){
+        $.post('/api/product/click/' + productId)
+
+        clickedProducts.push(productId);
+        localStorage.setItem('clickedProducts',JSON.stringify(clickedProducts));
+     }
+      
+ });
 
 
 
